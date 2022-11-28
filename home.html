@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MyToDoList</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm" style="background-color: #e3f2fd;">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <h5 >My To Do List</h5>
+        <ul class="navbar-nav ml-auto mb-2 mb-lg-0">
+          <li class="nav-item" role="presentation">
+            <button onclick="ajax()" class="nav-link " id="home-tab" data-bs-toggle="tab"
+              data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane"
+              aria-selected="true">Todolist</button>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" style="border: 1px solid dark;" href="index.html">Logout</a>
+          </li>
+      </div>
+    </div>
+  </nav>
+  <div class="container d-flex">
+    <div class="row">
+        <div class="text-dark col-sm-10  col-md-10 col-lg-10 col-xl-10" id="todotable"></div>
+    </div>
+  </div>
+
+
+
+
+  <script src="script.js">
+  </script>
+</body>
+<footer></footer>
+
+</html>
