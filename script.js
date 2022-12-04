@@ -74,7 +74,6 @@ function ajax() {
                 cell = row.insertCell(-1);
                 var chk = document.createElement('input');
                 cell.style.border = "1.5px solid black";
-
                 chk.type = "checkbox";
                 chk.id = "checkid"
                 cell.appendChild(chk);
@@ -93,18 +92,19 @@ function ajax() {
                         var array = [];
                         var checkedvalue = document.querySelectorAll('input[type=checkbox]:checked');
                         let counter = 0;
-                        for (let i = 0; i < checkedvalue.length; i++) { //to update counter each time a checkbox gets changed
+                        for (let i = 0; i <checkedvalue.length; i++) { //to update counter each time a checkbox gets changed
                             if (checkedvalue[i].checked) {
                                 counter++;
+                                if (checkboxLimit==counter) {
+
+                                    resolve(" Congrats. 5 Tasks have been Successfully Completed ");
+        
+                                    // event.preventDefault();
+        
+                                }
                             }
                         }
-                        if (checkboxLimit < counter) {
-
-                            resolve(" Congrats. 5 Tasks have been Successfully Completed ");
-
-                            event.preventDefault();
-
-                        }
+                        
                     }, false);
                 });
                 promise.then(
